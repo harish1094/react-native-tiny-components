@@ -1,0 +1,22 @@
+{
+  "name": "react-native-tiny-components",
+  "version": "0.0.1",
+  "description": "Components for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React",
+    "Native",
+    "CheckBox",
+    "Radio",
+    "Button"
+  ],
+  "author": "Harish Acharya",
+  "license": "ISC",
+  "dependencies": {
+    "QvisViewer": "file:../../QvisViewer",
+    "react-native-vector-icons": "^6.6.0"
+  }
+}
