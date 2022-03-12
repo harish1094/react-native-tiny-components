@@ -1,6 +1,6 @@
 {
   "name": "react-native-tiny-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Components for React Native",
   "main": "index.js",
   "scripts": {
@@ -8,19 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/harish1094/react-native-tiny-components.git"
+    "url": "git+https://github.com/harish1094/react-native-tiny-components"
   },
   "keywords": [
-    "React",
-    "Native",
+    "react-native",
     "CheckBox",
-    "Radio",
-    "Button"
+    "RadioButton"
   ],
   "author": "Harish Acharya",
   "license": "ISC",
   "dependencies": {
-    "QvisViewer": "file:../../QvisViewer",
     "react-native-vector-icons": "^6.6.0"
   }
 }

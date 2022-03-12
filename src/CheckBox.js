@@ -1,8 +1,8 @@
 
 import React, { Component } from "react";
 import {
-    StyleSheet, ScrollView, Text, View, TouchableWithoutFeedback,
-    Dimensions, Animated, TouchableOpacity
+    View, TouchableWithoutFeedback,
+
 } from "react-native";
 
 import Icons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -11,27 +11,31 @@ export default class CheckBox extends Component {
     constructor(props) {
         super(props);
         this.onChecked = this.onChecked.bind(this);
+        this.state = {
+            size: this.props.size ? this.props.size : 25,
+            color: this.props.color ? this.props.color : 'rgb(50, 168, 111)'
+        }
     }
 
     onChecked() {
-        this.props.onChecked(!his.props.checked)
+        this.props.onChecked(!this.props.checked)
     }
 
     render() {
         return (
             <View >
                 <TouchableWithoutFeedback onPress={this.onChecked}>
-                    <Icons name="video" style={{ marginLeft: 10 }} color="white" size={50} />
+                    <View>
+                        <Icons name="checkbox-blank-outline" color={"grey"} size={this.state.size} style={{ padding: 5 }} />
+                        {this.props.checked ?
+                            <Icons name="check-bold"
+                                color={this.state.color}
+                                size={this.state.size - 15}
+                                style={{ position: "absolute", padding: 12 }} /> :
+                            null}
+                    </View>
                 </TouchableWithoutFeedback>
             </View>
         )
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        position: "absolute",
-        alignItems: "center",
-    }
-});
