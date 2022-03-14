@@ -1,6 +1,6 @@
 {
   "name": "react-native-tiny-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Components for React Native",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,8 @@
   "keywords": [
     "react-native",
     "CheckBox",
-    "RadioButton"
+    "RadioButton",
+    "PopupComponent"
   ],
   "author": "Harish Acharya",
   "license": "ISC",

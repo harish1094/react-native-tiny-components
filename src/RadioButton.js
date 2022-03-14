@@ -1,7 +1,7 @@
 
 import React, { Component } from "react";
 import {
-    View, TouchableWithoutFeedback,
+    View, TouchableWithoutFeedback, Text
 
 } from "react-native";
 
@@ -25,10 +25,14 @@ export default class RadioButton extends Component {
         return (
             <View >
                 <TouchableWithoutFeedback onPress={this.onChecked}>
-                    <View>
+                    <View style={{ flexDirection: "row", alignItems: "center" }}>
                         <Icons name={!this.props.active ? "radiobox-marked" : "radiobox-blank"}
                             color={this.props.active ? "grey" : this.state.color}
                             size={this.state.size} style={{ padding: 5 }} />
+                        <Text
+                            style={this.props.textStyle ? this.props.textStyle : { fontSize: this.state.size - 5, color: "black" }}>
+                            {this.props.name ? this.props.name : ""}
+                        </Text>
                     </View>
                 </TouchableWithoutFeedback>
             </View>

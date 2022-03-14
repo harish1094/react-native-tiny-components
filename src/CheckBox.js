@@ -1,7 +1,7 @@
 
 import React, { Component } from "react";
 import {
-    View, TouchableWithoutFeedback,
+    View, TouchableWithoutFeedback, Text
 
 } from "react-native";
 
@@ -25,7 +25,7 @@ export default class CheckBox extends Component {
         return (
             <View >
                 <TouchableWithoutFeedback onPress={this.onChecked}>
-                    <View>
+                    <View style={{ flexDirection: "row", alignItems: "center" }}>
                         <Icons name="checkbox-blank-outline" color={"grey"} size={this.state.size} style={{ padding: 5 }} />
                         {this.props.checked ?
                             <Icons name="check-bold"
@@ -33,6 +33,10 @@ export default class CheckBox extends Component {
                                 size={this.state.size - 15}
                                 style={{ position: "absolute", padding: 12 }} /> :
                             null}
+                        <Text
+                            style={this.props.textStyle ? this.props.textStyle : { fontSize: this.state.size - 5, color: "black" }}>
+                            {this.props.name ? this.props.name : ""}
+                        </Text>
                     </View>
                 </TouchableWithoutFeedback>
             </View>
