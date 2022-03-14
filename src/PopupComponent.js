@@ -22,7 +22,6 @@ export default class PopupComponent extends Component {
     }
 
     openDialog() {
-        console.log("ssssss")
         this.setState({ showPopUp: !this.state.showPopUp });
     }
 
