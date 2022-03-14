@@ -112,8 +112,8 @@ export default class ExampleApp extends Component {
 | `ref` | String | Yes      |         | Will be used to toggle popup window.                                                      |
 | `components`   | JSX Components | No      |         | Whatever is passed in the components prop will be show in the popup body. |
 | `headerText`   | String | No      |         | Title for the popup . |
-| `headerStyle`   | String | Yes      |         | Style for the Title text . |
-| `headerTextStyle`   | String | Yes      |         | Style for the Title text container . |
+| `headerStyle`   | Style | Yes      |         | Style for the Title text . |
+| `headerTextStyle`   | Style | Yes      |         | Style for the Title text container . |
 
 
 
